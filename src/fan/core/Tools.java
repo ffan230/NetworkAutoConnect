@@ -6,10 +6,10 @@ import java.io.InputStreamReader;
 
 public class Tools {
 
-	final static String broadbandName = "";//¿í´øÃû³Æ ÀıÈç£º¡°¿í´øÁ¬½Ó¡±
-	final static String account = "";//¿í´øÕËºÅ ÀıÈç£º¡°1700500xxxxx¡±
-	final static String passWord = "";//¿í´øÃÜÂë
-	final static String webSite = "";//ÓÃÀ´pingµÄÍøÖ·£¬¼ì²âÍøÍ¨²»Í¨
+	final static String broadbandName = "";//å®½å¸¦åç§° ä¾‹å¦‚ï¼šâ€œå®½å¸¦è¿æ¥â€
+	final static String account = "";//å®½å¸¦è´¦å· ä¾‹å¦‚ï¼šâ€œ1700500xxxxxâ€
+	final static String passWord = "";//å®½å¸¦å¯†ç 
+	final static String webSite = "";//ç”¨æ¥pingçš„ç½‘å€ï¼Œæ£€æµ‹ç½‘é€šä¸é€š
 	
 	public void Connect() throws IOException {
 
@@ -18,12 +18,12 @@ public class Tools {
 		BufferedReader bufferedReader = new BufferedReader(in);
 		String line = null;
 		while ((line = bufferedReader.readLine()) != null) {
-			if (line.contains("ÒÑÁ¬½Ó" + " " + broadbandName)) {
-				System.out.println(broadbandName + "Á¬½Ó³É¹¦£¡");
-			} else if (line.contains("ÄãÒÑ¾­Á¬½Óµ½" + " " + broadbandName)) {
-				System.out.println("ÒÑ¾­Á¬½Óµ½" + broadbandName);
-			} else if (line.contains("Ô¶³Ì·ÃÎÊ´íÎó 813")) {
-				System.out.println("ÒÑ¾­Á¬½Óµ½ÁíÒ»¸ö¿í´ø£¡");
+			if (line.contains("å·²è¿æ¥" + " " + broadbandName)) {
+				System.out.println(broadbandName + "è¿æ¥æˆåŠŸï¼");
+			} else if (line.contains("ä½ å·²ç»è¿æ¥åˆ°" + " " + broadbandName)) {
+				System.out.println("å·²ç»è¿æ¥åˆ°" + broadbandName);
+			} else if (line.contains("è¿œç¨‹è®¿é—®é”™è¯¯ 813")) {
+				System.out.println("å·²ç»è¿æ¥åˆ°å¦ä¸€ä¸ªå®½å¸¦ï¼");
 			}
 		}
 	}
@@ -39,10 +39,10 @@ public class Tools {
 		BufferedReader bufferedReader = new BufferedReader(in);
 		String line = null;
 		while ((line = bufferedReader.readLine()) != null) {
-			if(line.contains("Ping ÇëÇóÕÒ²»µ½Ö÷»ú")){
+			if(line.contains("Ping è¯·æ±‚æ‰¾ä¸åˆ°ä¸»æœº")){
 				shutDown();
 				Connect();
-			}else if(line.contains("ÕıÔÚ Ping")){
+			}else if(line.contains("æ­£åœ¨ Ping")){
 				return true;
 			}
 		}
